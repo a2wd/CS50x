@@ -1,0 +1,83 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
+
+#holdings
+{
+	margin: 2.5em auto;
+	padding: 0.5em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align:left;		
+}
+
+#holdings tr
+{
+	border-top: 1px dotted black;
+	border-bottom: 1px dotted black;
+}
+
+#holdings tr:hover, #holdings thead
+{
+	background-color:#fac;
+}
+
+#holdings td, #holdings th
+{
+	padding: 0.5em 1em;
+}
+
+#cash
+{	
+	margin-bottom:2.5e
+}
+
+#details
+{
+	margin: 1em 0;
+}
+
+#details span
+{
+	padding:0.5em;
+	background-color:#fac;
+	border-top:1px dotted black;
+	border-bottom:1px dotted black;	
+}
+
+#sell
+{
+	display:inline;
+	margin: 1em;
+}

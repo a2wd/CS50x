@@ -1,0 +1,19 @@
+0.  GIF supports 256 colours (although by tiling blocks within an image, true/32-bit colour can be achieved), BMP can store up to 4,294,967,296 colours at 32-bit depth, while PNG and GIF both can store up to 24-bit colour-information for 16,777,216 different colours.
+1.  Ony GIF supports animation.
+2.  Lossy compression means some pixel information is lost in favour of a higher compression (and smaller file size).
+3.  JPEG and GIF are usually lossy though it is possible to write lossless files of these types.
+4.  When a file is deleted on a fat system, the link from the FAT (file allocation table) is removed and a series of bytes is written to the beggining block of that file to indicate that it is safe to overwrite that block with new data.
+5.  To ensure that deleted files cannot be recovered, it is necessary to overwrite the blocks that previously held the file with a series of null bytes or, as recommended by he DoD, by a series of random characters, further overwritten by the complement of the random characters. A program like Wipe (Linux) could be used to do this.
+6.  stdint.h is a library defined in the C99 standard with integer types of exact width, so that the width of a given integer will be the same regardless of the platforms.
+7.  The point of using uint8_t, uint_32_t, int32_t & unint16_t in a program is to be certain that the integer variables are of a fixed width, so operations can be carried out assuming data will be in specific memory addresses or alignments.
+8.  A BYTE is 1 byte long(!), a DWORD and a LONG are both 4 bytes long, while a WORD is 2 bytes long.
+9.  The first two bytes of a BMP file must be 0x42 0x4D (in hexidecimal), which correspond to the ASCII characters "BM".
+10. bfSize is the size, in bytes of the enitre bitmap file, while biSize is the size of the BITMAPINFOHEADER structure.
+11. If biHeight is negative, it indicates that the bitmap file is saved in a top-down format whereby the top line of pixels in the file refers to the top line of the image as it should be displayed. 
+12. biBitCount specifies a BMP file's colour depth.
+13. fopen() might return NULL when it was unable to open a file succesfully. This could be because of a lack of permissions or a device fault.
+14. The third arguement passed to fread(), nmemb, specifies the number of elements to read in, given the width passed in argument 2 (size). As there is only one of each header, it is specified to read only one set of bytes of that width.
+15. copy.c assigns the value of 3 to padding when bi.biWidth = 3 as (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4 = (4 - (3 * 3) % 4) % 4 = (4 - 9 % 4) % 4 = (4 - 1) % 4 = 3 % 4 = 3.
+16. fseek() changes the address pointed to by a file pointer.
+17. SEEK_CUR is a defined value which tells fseek() to change the position of the pointer to a file, with reference to the position currently being pointed to.
+18. Milo Banana dun it!
